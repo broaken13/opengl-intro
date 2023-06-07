@@ -8,4 +8,10 @@ exe = executable('first', ['first.cpp', 'glad.c'],
 rect = executable('rectangle', ['rectangle.cpp', 'glad.c'],
   dependencies: glfw)
 
+diffVAO = executable('diffVAOs', ['glad.c', 'exercises/diffVAOs.cpp'],
+  dependencies: glfw)
+
+diffColors = executable('diffColors', ['glad.c', 'exercises/diffColors.cpp'],
+  dependencies: glfw)
+
 test('basic', exe)
