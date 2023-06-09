@@ -19,3 +19,28 @@ These are required. We can pass these as an array, with every 3 values represent
 
 The values or normalized for the screen port with all values falling between -1.0 and 1.0 being within the screen,
 and all that are outside will not be rendered.
+
+We are mainly looking to set `gl_Position`
+
+## Fragment Shaders
+Also required, these determine the color of a vertex using red, green, blue, and alpha (opacity).
+
+Here we are looking to set `FragColor`
+
+## Shader variables
+We have access to basic types in shaders (bool, int, float, etc.)
+
+We also have vectors for these types:
+vec_n_ = vector of _n_ floats ex: vec3
+bvec_n_ = vector of _n_ booleans
+etc.
+
+Note, n goes up to 4.
+
+### Swizzling
+Vectors by can accessed like:
+```
+vec3 SomeVec = vec3(0.5, 0.7, 0.1);
+vec4 AnotherVec = vec4(Somevec.yzxx);
+vec4 YetAnother = vec4(someVec, 1.0);
+```
